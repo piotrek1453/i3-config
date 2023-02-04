@@ -54,6 +54,9 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
+#disable screen after 5 minutes
+exec_always --no-startup-id xset dpms 0 0 300 
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% #decrease sound volume
@@ -431,8 +434,6 @@ mode "$mode_gaps_outer" {
 #Monitor setup, wallpaper
 #exec --no-startup-id "sleep 10; autorandr dom; nitrogen --restore"
 
-#disable screen after 5 minutes
-exec --no-startup-id xset dpms 0 0 300	
 
 
 
