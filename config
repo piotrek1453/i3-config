@@ -431,5 +431,8 @@ mode "$mode_gaps_outer" {
 #Monitor setup, wallpaper
 #exec --no-startup-id "sleep 10; autorandr dom; nitrogen --restore"
 
+#disable screen after 5 minutes
+exec --no-startup-id xset dpms 0 0 300	
+
 
 
